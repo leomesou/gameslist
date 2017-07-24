@@ -9,5 +9,6 @@ target 'GamesList' do
 	
 	# Pods for GamesList
 	pod 'Alamofire', '~> 4.5’
+	pod 'AlamofireImage', '~> 3.2'
 	
 end

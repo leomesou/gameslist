@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UIImage.swift
 //  GamesList
 //
 //  Created by Leandro Sousa on 23/07/17.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+extension UIImage {
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
+	static func placeholder() -> UIImage? {
+		return #imageLiteral(resourceName: "placeholder")
 	}
 }
