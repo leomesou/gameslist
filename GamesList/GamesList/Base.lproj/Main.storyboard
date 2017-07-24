@@ -19,6 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.98039215690000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="G5k-CQ-KEE" kind="relationship" relationship="viewControllers" id="sG5-ni-44R"/>
@@ -33,10 +34,13 @@
         <scene sceneID="HFo-iB-475">
             <objects>
                 <navigationController id="G5k-CQ-KEE" userLabel="Nav Games List" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Games List" id="Pjq-qA-rqJ"/>
+                    <tabBarItem key="tabBarItem" title="" image="gamesListOff" selectedImage="gamesListOn" id="Pjq-qA-rqJ">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Vo-JQ-bNI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.98039215690000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YJd-G7-7dB"/>
@@ -65,15 +69,15 @@
                                     <constraint firstAttribute="height" id="N4w-I0-Qh8"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-Xc-jqK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-Xc-jqK">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.98039215690000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gameCell" rowHeight="64" id="UEb-hH-bED" customClass="GLGameTableViewCell" customModule="GamesList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UEb-hH-bED" id="1Vw-Bl-ybI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pxg-IB-I0a">
@@ -83,10 +87,10 @@
                                                         <constraint firstAttribute="width" secondItem="pxg-IB-I0a" secondAttribute="height" multiplier="1:1" id="NH6-SV-zK9"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95Z-fq-09Q">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95Z-fq-09Q">
                                                     <rect key="frame" x="68" y="21" width="287" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -98,6 +102,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="95Z-fq-09Q" secondAttribute="trailing" constant="12" id="wRu-lf-veR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96078431372549022" green="0.98039215686274506" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="gameIcon" destination="pxg-IB-I0a" id="Hmf-4P-Yy6"/>
                                             <outlet property="gameTitle" destination="95Z-fq-09Q" id="LIH-Qb-dUj"/>
@@ -113,7 +118,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.98039215690000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HQu-cg-QGI" secondAttribute="bottom" id="BB6-4S-yEq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HQu-cg-QGI" secondAttribute="trailing" id="IvU-9P-Iex"/>
@@ -142,10 +147,13 @@
         <scene sceneID="lqX-fU-Xla">
             <objects>
                 <navigationController id="uNB-5j-UWu" userLabel="Nav QR Reader" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="QR Reader" id="SQt-fC-JRl"/>
+                    <tabBarItem key="tabBarItem" title="" image="qrCodeOff" selectedImage="qrCodeOn" id="SQt-fC-JRl">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vqG-xP-0RM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.98039215690000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="CfR-bp-vmA" kind="relationship" relationship="rootViewController" id="Pog-Qo-8Bn"/>
@@ -166,25 +174,7 @@
                     <view key="view" contentMode="scaleToFill" id="uyT-4J-r3d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code Reader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLG-Cf-VsI">
-                                <rect key="frame" x="123.5" y="323" width="127.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LD-TL-uLr">
-                                <rect key="frame" x="148.5" y="404" width="77" height="30"/>
-                                <state key="normal" title="See Details"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="3LD-TL-uLr" firstAttribute="top" secondItem="YLG-Cf-VsI" secondAttribute="bottom" constant="60" id="Oof-6e-aK2"/>
-                            <constraint firstItem="3LD-TL-uLr" firstAttribute="centerX" secondItem="uyT-4J-r3d" secondAttribute="centerX" id="sXI-UY-aUK"/>
-                            <constraint firstItem="YLG-Cf-VsI" firstAttribute="centerX" secondItem="uyT-4J-r3d" secondAttribute="centerX" id="suw-kE-LGP"/>
-                            <constraint firstItem="YLG-Cf-VsI" firstAttribute="centerY" secondItem="uyT-4J-r3d" secondAttribute="centerY" id="zC5-Zu-Mm3"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.98039215690000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="QR Reader" id="sKe-dk-WW8">
                         <barButtonItem key="backBarButtonItem" title=" " id="BJ9-zg-toG"/>
@@ -206,26 +196,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNs-GD-yFV">
-                                <rect key="frame" x="136" y="323" width="102" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="oIc-qy-aPz">
-                                <rect key="frame" x="112" y="133" width="150" height="150"/>
+                                <rect key="frame" x="87" y="70" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="OnS-f4-rkl"/>
+                                    <constraint firstAttribute="width" constant="200" id="OnS-f4-rkl"/>
                                     <constraint firstAttribute="width" secondItem="oIc-qy-aPz" secondAttribute="height" multiplier="1:1" id="Tg3-dy-cxz"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Details" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNs-GD-yFV">
+                                <rect key="frame" x="26" y="320" width="323" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.98039215690000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="GNs-GD-yFV" firstAttribute="top" secondItem="oIc-qy-aPz" secondAttribute="bottom" constant="40" id="0rY-nq-epS"/>
+                            <constraint firstItem="GNs-GD-yFV" firstAttribute="top" secondItem="oIc-qy-aPz" secondAttribute="bottom" constant="50" id="0rY-nq-epS"/>
+                            <constraint firstItem="GNs-GD-yFV" firstAttribute="leading" secondItem="rle-OJ-2NF" secondAttribute="leadingMargin" constant="10" id="CfJ-QD-YPI"/>
                             <constraint firstItem="oIc-qy-aPz" firstAttribute="centerX" secondItem="rle-OJ-2NF" secondAttribute="centerX" id="Y21-Vr-5EY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GNs-GD-yFV" secondAttribute="trailing" constant="10" id="cnS-QB-nnh"/>
                             <constraint firstItem="GNs-GD-yFV" firstAttribute="centerX" secondItem="rle-OJ-2NF" secondAttribute="centerX" id="grn-dO-wFA"/>
-                            <constraint firstItem="GNs-GD-yFV" firstAttribute="centerY" secondItem="rle-OJ-2NF" secondAttribute="centerY" id="qsc-2t-t2p"/>
+                            <constraint firstItem="oIc-qy-aPz" firstAttribute="top" secondItem="yrZ-V9-wm2" secondAttribute="bottom" constant="50" id="pb6-gV-fLc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Game Details" id="z1T-cc-tWF">
@@ -242,6 +234,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gamesListOff" width="30" height="30"/>
+        <image name="gamesListOn" width="30" height="30"/>
         <image name="placeholder" width="133" height="133"/>
+        <image name="qrCodeOff" width="30" height="30"/>
+        <image name="qrCodeOn" width="30" height="30"/>
     </resources>
 </document>

@@ -128,7 +128,10 @@ class GLQRReaderViewController: UIViewController, AVCaptureMetadataOutputObjects
 			}
 			else {
 				let alert = UIAlertController(title: Strings.kError, message: Strings.kGameNotFound, preferredStyle: .alert)
-				alert.addAction(UIAlertAction(title: Strings.kOK, style: .default, handler: nil))
+				alert.addAction(UIAlertAction(title: Strings.kOK, style: .default) { _ in
+					self.captureSession?.startRunning()
+					self.qrCodeFrameView?.frame = CGRect.zero
+				})
 				self.present(alert, animated: true, completion: nil)
 			}
 		}
